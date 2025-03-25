@@ -1,39 +1,40 @@
+// Import Currency class from 3-currency.js
+import Currency from './3-currency';
 
-class Pricing {
+export default class Pricing {
   constructor(amount, currency) {
+    // Create objs
     this._amount = amount;
     this._currency = currency;
   }
 
-  // Getter for amount
-  get amount() {
-    return this._amount;
+  // Methods
+
+  displayFullPrice() { // Display the class instance (string) with amount and currency
+    return (`${this.amount} ${this.currency.name} (${this.currency.code})`);
   }
 
-  // Setter for amount
-  set amount(newAmount) {
+  static convertPrice(amount, conversionRate) { // Static method to convert price
+    return amount * conversionRate; // Convert price using conversion rate (number)
+  }
+
+  // Setters for amount and currency attributes for the class
+  set amount(newAmount) { // Setter for amount attribute (number)
     this._amount = newAmount;
   }
 
-  // Getter for currency
-  get currency() {
-    return this._currency;
-  }
-
-  // Setter for currency
-  set currency(newCurrency) {
+  set currency(newCurrency) { // Setter for currency attribute (Currency class)
+    if (!(newCurrency instanceof Currency)) throw TypeError('currency must be an instance of Currency');
     this._currency = newCurrency;
   }
 
-  // Method to display full price
-  displayFullPrice() {
-    return `${this._amount} ${this._currency.name} (${this._currency.code})`;
+  // Getters for amount and currency attributes for the class
+  get amount() { // Getter for amount attribute (string)
+    return this._amount;
   }
 
-  // Static method to convert price
-  static convertPrice(amount, conversionRate) {
-    return amount * conversionRate;
+  get currency() { // Getter for currency attribute (Currency class)
+    return this._currency;
   }
 }
 
-export default Pricing;
