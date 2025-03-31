@@ -1,1 +1,1 @@
-README for : ES6_data_manipulation project 
+ES6_data_manipulation project 
