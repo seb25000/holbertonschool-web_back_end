@@ -1,23 +1,23 @@
-function getListStudents() {
-  const students = [
+export default function getListStudents() {
+  return [
     {
-      id: 1,
-      firstName: 'Guillaume',
 
+      firstName: 'Guillaume',
+      id: 1,
       location: 'San Francisco',
     },
     {
-      id: 2,
-      firstName: 'James',
 
+      firstName: 'James',
+      id: 2,
       location: 'Columbia',
     },
     {
-      id: 5,
-      firstName: 'Serena',
 
+      firstName: 'Serena',
+      id: 5,
       location: 'San Francisco',
     },
   ];
-  return students;
+
 }
