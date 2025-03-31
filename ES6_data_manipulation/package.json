@@ -1,21 +1,13 @@
 {
-  "name": "my-project",
+  "name": "es6-data-manipulation",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js",
-    "lint": "eslint .",
-    "dev": "nodemon index.js"
+    "dev": "node 0-main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.15"
-  }
+  "license": "ISC"
 }
